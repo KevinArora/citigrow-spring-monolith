@@ -1,0 +1,5 @@
+ALTER TABLE ONLY quadrants
+ADD CONSTRAINT quadrants_garden_id_fkey FOREIGN KEY (garden_id)
+REFERENCES gardens(id)
+  ON UPDATE CASCADE
+ON DELETE CASCADE;
