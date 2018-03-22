@@ -1,27 +1,24 @@
 package com.example.citigrow.models;
 
-import javax.persistence.*;
+
 import lombok.*;
 
+import javax.persistence.*;
 
 @Data
 @Entity
 @AllArgsConstructor @NoArgsConstructor @Getter @Setter
-@Table(name = "users")
-public class User {
-
+@Table(name="produce")
+public class Produce {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "name")
-    private String userName;
+    private String name;
 
-    @Column(name = "age")
-    private String firstName;
-
-    @Column(name = "password")
-    private String lastName;
+    @Column(name = "description")
+    private String descrption;
 
 
 }

@@ -1,10 +1,10 @@
-INSERT INTO users(user_name, first_name, last_name)
-VALUES ('quinto', 'timothy', 'quinto'),
-('darkness', 'charlie', 'murphy'),
-('hilldawg', 'hillary', 'clinton'),
-('onionfan', 'ser', 'davos'),
-('1337codr', 'mad', 'hax'),
-('badstash', 'charlie', 'chaplin');
+
+INSERT INTO users(name, age, password)
+VALUES
+('user 1', 50, 'a'),
+('user 2', 30, 'a'),
+('user 3', 21, 'a'),
+('user 4', 25, 'a');
 
 
 INSERT INTO gardens(name, zipcode, user_id)
