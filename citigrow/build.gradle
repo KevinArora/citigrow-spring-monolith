@@ -21,6 +21,7 @@ sourceCompatibility = 1.8
 
 repositories {
 	mavenCentral()
+    maven { url 'https://repo.spring.io/snapshot' }
 }
 
 
@@ -31,4 +32,14 @@ dependencies {
 	compile 'org.flywaydb:flyway-core'
 	compile 'org.springframework.boot:spring-boot-starter-data-jpa'
 	compileOnly 'org.projectlombok:lombok'
+	compile 'org.springframework.security:spring-security-web:5.0.4.BUILD-SNAPSHOT'
+	compile 'org.springframework.security:spring-security-config:5.0.4.BUILD-SNAPSHOT'
 }
+configurations.all {
+	resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+		if (details.requested.group == 'org.springframework') {
+			details.useVersion '5.0.4.RELEASE'
+		}
+	}
+}
+

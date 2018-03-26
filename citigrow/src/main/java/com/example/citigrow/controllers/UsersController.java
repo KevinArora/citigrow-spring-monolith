@@ -4,7 +4,7 @@ import com.example.citigrow.models.User;
 import com.example.citigrow.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 public class UsersController {
 
